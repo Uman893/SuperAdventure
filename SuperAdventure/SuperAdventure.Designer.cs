@@ -42,7 +42,7 @@
             this.btnUseWeapon = new System.Windows.Forms.Button();
             this.btnUsePotion = new System.Windows.Forms.Button();
             this.btnNorth = new System.Windows.Forms.Button();
-            this.bntEast = new System.Windows.Forms.Button();
+            this.btnEast = new System.Windows.Forms.Button();
             this.btnSouth = new System.Windows.Forms.Button();
             this.btnWest = new System.Windows.Forms.Button();
             this.rtbLocation = new System.Windows.Forms.RichTextBox();
@@ -134,21 +134,21 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(369, 559);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "cboWeapons";
+            this.cboWeapons.FormattingEnabled = true;
+            this.cboWeapons.Location = new System.Drawing.Point(369, 559);
+            this.cboWeapons.Name = "cboWeapons";
+            this.cboWeapons.Size = new System.Drawing.Size(121, 23);
+            this.cboWeapons.TabIndex = 9;
+            this.cboWeapons.Text = "cboWeapons";
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(369, 593);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Text = "cboPotions";
+            this.cboPotions.FormattingEnabled = true;
+            this.cboPotions.Location = new System.Drawing.Point(369, 593);
+            this.cboPotions.Name = "cboPotions";
+            this.cboPotions.Size = new System.Drawing.Size(121, 23);
+            this.cboPotions.TabIndex = 10;
+            this.cboPotions.Text = "cboPotions";
             // 
             // btnUseWeapon
             // 
@@ -182,13 +182,13 @@
             // 
             // bntEast
             // 
-            this.bntEast.Location = new System.Drawing.Point(573, 457);
-            this.bntEast.Name = "bntEast";
-            this.bntEast.Size = new System.Drawing.Size(75, 23);
-            this.bntEast.TabIndex = 14;
-            this.bntEast.Text = "East";
-            this.bntEast.UseVisualStyleBackColor = true;
-            this.bntEast.Click += new System.EventHandler(this.bntEast_Click);
+            this.btnEast.Location = new System.Drawing.Point(573, 457);
+            this.btnEast.Name = "bntEast";
+            this.btnEast.Size = new System.Drawing.Size(75, 23);
+            this.btnEast.TabIndex = 14;
+            this.btnEast.Text = "East";
+            this.btnEast.UseVisualStyleBackColor = true;
+            this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
             // 
             // btnSouth
             // 
@@ -273,12 +273,12 @@
             this.Controls.Add(this.rtbLocation);
             this.Controls.Add(this.btnWest);
             this.Controls.Add(this.btnSouth);
-            this.Controls.Add(this.bntEast);
+            this.Controls.Add(this.btnEast);
             this.Controls.Add(this.btnNorth);
             this.Controls.Add(this.btnUsePotion);
             this.Controls.Add(this.btnUseWeapon);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboPotions);
+            this.Controls.Add(this.cboWeapons);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblExperience);
@@ -310,8 +310,8 @@
         private Label lblExperience;
         private Label lblLevel;
         private Label label5;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cboWeapons;
+        private ComboBox cboPotions;
         private Button btnUseWeapon;
         private Button btnUsePotion;
         private Button btnNorth;

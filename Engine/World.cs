@@ -12,7 +12,7 @@ namespace Engine
     {
         public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Monster> Monsters = new List<Monster>();
-        public static readonly List<Quest> quests= new List<Quest>();
+        public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
         public const int ITEM_ID_RUSTY_SWORD = 1;
@@ -42,7 +42,7 @@ namespace Engine
         public const int LOCATION_ID_FARM_FIELD = 7;
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
-        
+
         static World()
         {
             PopulateItems();
@@ -98,7 +98,7 @@ namespace Engine
                 "Kill snakes in the farmer's field and bring back 3 snake fangs." +
                 "You will receive an adventurer's pass and 20 gold pieces", 20, 20);
 
-            clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemById(ITEM_ID_SNAKE_FANG), 3));
+            clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
@@ -173,54 +173,55 @@ namespace Engine
             Locations.Add(farmersField);
             Locations.Add(bridge);
             Locations.Add(spiderField);
+        }
 
-            public static Item ItemByID(int id)
+        public static Item ItemByID(int id)
+        {
+            foreach (Item item in Items)
             {
-                foreach(Item item in Items)
+                if (item.ID == id)
                 {
-                    if(item.ID == id)
-                    {
-                        return item;
-                    }
+                    return item;
                 }
-                return null;
             }
+            return null;
+        }
 
-            public static Monster MonsterByID(int id)
+        public static Monster MonsterByID(int id)
+        {
+            foreach (Monster monster in Monsters)
             {
-                foreach(Monster monster in Monsters)
+                if (monster.ID == id)
                 {
-                    if(monster.ID == id)
-                    {
-                        return monster;
-                    }
+                    return monster;
                 }
-                return null;
             }
+            return null;
+        }
 
-            public static Quest QuestByID(int id)
+        public static Quest QuestByID(int id)
+        {
+            foreach (Quest quest in Quests)
             {
-                foreach(Quest quest in Quests)
+                if (quest.ID == id)
                 {
-                    if(quest.ID == id)
-                    {
-                        return quest;
-                    }
+                    return quest;
                 }
-                return null;
             }
+            return null;
+        }
 
-            public static Location LocationByID(int id)
+        public static Location LocationByID(int id)
+        {
+            foreach (Location location in Locations)
             {
-                foreach(Location location in Locations)
+                if (location.ID == id)
                 {
-                    if(location.ID == id)
-                    {
-                        return location;
-                    }
+                    return location;
                 }
-                return null;
             }
+            return null;
         }
     }
 }
+
